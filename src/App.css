@@ -76,10 +76,11 @@ body{
   margin-left: 3em;
   padding: .3em 1em ;
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(87, 87, 87 0.3);
+  box-shadow: 0 0 5px rgba(78, 78, 78, .4);
   border-radius: 20px;
   cursor:pointer ;
   color:coral ;
+  border: gray;
 }
 @media (min-width:600px){
   .container{

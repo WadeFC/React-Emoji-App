@@ -16,9 +16,9 @@ function App() {
     setSearch(e.target.value)
    }
 
-    let handleSubmit =() => {
-        if (search! ==''){
-          fetch(`https://emoji-api.com/emojis?search=${search}&access_key=67b572d799ad1d60b0ed298bdb91172b`)
+    let handleSubmit = () => {
+        if (search !== ''){
+          fetch(`https://emoji-api.com/emojis?search=${search}&access_key=67b572d799ad1d60b0ed298bdb91172bf94b8f96`)
           .then(res=> res.json())
           .then(res =>setData(res))
         }
@@ -31,7 +31,7 @@ function App() {
           <p>A Simple Emoji Search With React</p>
 
           <div>
-            <input type="text" placeholder='Search' value= {search} onChange{(e)=> handleSearch(e)} />
+            <input type="text" placeholder='Search' value={search} onChange={(e)=> handleSearch(e)} />
             <button className='search' onClick={()=> handleSubmit()}>Search</button>
           </div>
         </div>
@@ -39,8 +39,8 @@ function App() {
 
       <div className='container'>
       {
-        data.map((e,i) =>
-        <div className='card' key={e.codePoint}>
+        data.map((e, i) =>
+        <div className='card' key={e.slug}>
           <p className='emo'>{e.character} </p>
           <p className='name'>{e.unicodeName}</p>
         </div>   
