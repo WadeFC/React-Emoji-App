@@ -20,13 +20,7 @@ function App() {
         if (search! ==''){
           fetch(`https://emoji-api.com/emojis?search=${search}&access_key=67b572d799ad1d60b0ed298bdb91172b`)
           .then(res=> res.json())
-          .then(res =>{
-            if (res) {
-              setData(res)
-            }
-            else{setData([])
-            }
-          })
+          .then(res =>setData(res))
         }
     }
   return (
@@ -37,8 +31,8 @@ function App() {
           <p>A Simple Emoji Search With React</p>
 
           <div>
-            <input type="text" placeholder='Search' value= {search} onChang{(e)=> handleSearch()} />
-            <button className='search'>Search</button>
+            <input type="text" placeholder='Search' value= {search} onChange{(e)=> handleSearch(e)} />
+            <button className='search' onClick={()=> handleSubmit()}>Search</button>
           </div>
         </div>
       </div>
