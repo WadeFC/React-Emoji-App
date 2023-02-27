@@ -84,7 +84,7 @@ body{
 }
 @media (min-width:600px){
   .container{
-    background-color:red;
+    /* background-color:red; */
     width: 70%;
     margin-inline:auto ;
   }
